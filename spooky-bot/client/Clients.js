@@ -1,7 +1,9 @@
+const Convert = require("./Conversion.js")
+
 module.exports = class SpookyBotClients {
-    constructor(SpookyBot_clients){
-        this.bsbc = SpookyBot_clients
-        require('../utils/loadEvents')(SpookyBot_clients);
+    constructor(tokens){
+        this.bsbc = new Convert(tokens)
+        require('../utils/loadEvents')(this.bsbc);
     }
 
     init(){

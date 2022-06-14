@@ -1,9 +1,6 @@
 const express = require("express")
 
-module.exports = class Web extends express.Router() {
-    constructor(){
-    }
-
+module.exports = class Web extends express.Router {
     init(){
         this.get("/", (req, res) => {
             res.send("Normal ça marche")
