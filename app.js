@@ -1,11 +1,10 @@
-const Convert = require('./spooky-bot/client/Conversion');
 const SpookyBotClients = require('./spooky-bot/client/Clients');
 
 // WEB PART
 
 // BOT PART
 
-const tokens = [""]
-const final = new SpookyBotClients(tokens)
+const tokens = ["OTgzMDkyOTA0ODQxMDU2MzE2.GrwcLF.XVMEb6bnLXqAITu47en7yOB-8HDrhA19QOGyqI"]
+const SpookyClients = new SpookyBotClients(tokens)
 
-final.init()
+SpookyClients.init()
