@@ -6,7 +6,7 @@ module.exports = class SpookyBotClients {
         require('../utils/loadEvents')(this.bsbc);
     }
 
-    init(){
+    run(){
         this.bsbc.forEach(e => {
             e.connect()
         });
