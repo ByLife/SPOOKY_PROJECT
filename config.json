@@ -1,0 +1,12 @@
+{
+    "BOT_BasePath": "spooky-web/",
+    "WEB_BasePath": "spooky-bot/",
+
+    "BOT_CommandsPath": "commands/",
+    "BOT_EventsPath": "events/",
+    "BOT_UtilsPath": "utils/",
+    "BOT_ClientPath": "client/",
+
+    "prefix": "b?"
+}
+
