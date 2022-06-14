@@ -48,11 +48,8 @@ module.exports =  class SpookyBot extends Discord.Client {
       #loadCommands(dir){
         fs.readdir(`./spooky-bot/commands/${dir}`, (err, files) => {
           if(err) console.log(err)
-          let jsfile = files.filter(f => f.split('.').pop() === 'js')
-          if(jsfile.length <= 0) {
-            console.log('[-] Aucune commande trouvé')
-          }
-       
+          if(!files) return 
+          let jsfile = files.filter(f => f.split('.').pop() === 'js')       
           jsfile.forEach((f, i) => {
           let props = require(`../commands/${dir}${f}`);
           this.commands.set(props.name, props);

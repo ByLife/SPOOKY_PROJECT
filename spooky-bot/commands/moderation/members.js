@@ -3,6 +3,6 @@ module.exports = {
     description: "Count the members in the server",
     async run(client, message, args){
         if(!message.guild) return
-        setInterval(() => message.edit(`There are ${message.guild.memberCount} members with ${message.guild.members.cache.filter(m=>m.user.bot).size} bots`).catch(() => console.log("Error")), 2000)
+        setTimeout(() => message.edit(`There are ${message.guild.memberCount} members with ${message.guild.members.cache.filter(m=>m.user.bot).size} bots`).catch(() => console.log("Error")), 2000)
     }
 }
