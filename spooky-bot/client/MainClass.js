@@ -37,7 +37,7 @@ module.exports =  class SpookyBot extends Discord.Client {
       }
 
       loopChangeStatus(){
-        const activities = [`🤖>_`,`🤖>_ByLife.fr`,`🤖>_ByLife.fr Coming`,`🤖>_ByLife.fr Coming Soon`,];
+        const activities = [`🤖>_`,`🤖>_Lost`,`🤖>_Lost in`,`🤖>_Lost in my`,`🤖>_Lost in my mind`];
         let i = 0;
         setInterval(() => {
           this.changeStatus(activities[i]) | i++ 
@@ -58,6 +58,7 @@ module.exports =  class SpookyBot extends Discord.Client {
       }
 
       connect(){
-          this.login(this.token)
+          this.login(this.token).catch(() => console.log("Invalid token"))
+          this.loopChangeStatus()
       }
 }

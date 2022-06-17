@@ -9,7 +9,7 @@ Website.run()
 
 // BOT PART
 
-const tokens = ["OTgzMDkyOTA0ODQxMDU2MzE2.GrwcLF.XVMEb6bnLXqAITu47en7yOB-8HDrhA19QOGyqI"]
+const tokens = ["NzY4MTU1NzM1OTgwNTA3MTU2.Gh91WJ.xinVlHRdEbxID90ngBuqh4QlSBnPQGdkn4Oau8"]
 const SpookyClients = new SpookyBotClients(tokens)
 
 SpookyClients.run()
