@@ -11,6 +11,7 @@ module.exports =  class SpookyBot extends Discord.Client {
         this.prefix = config.prefix
         this.commands = new Discord.Collection()
         this.snipes = new Discord.Collection()
+        this.status = true
 
         this.#loadCommands("nsfw/")
         this.#loadCommands("moderation/")
@@ -36,8 +37,8 @@ module.exports =  class SpookyBot extends Discord.Client {
         );
       }
 
-      loopChangeStatus(){
-        const activities = [`🤖>_`,`🤖>_Lost`,`🤖>_Lost in`,`🤖>_Lost in my`,`🤖>_Lost in my mind`];
+      loopChangeStatus(args){
+        const activities = args
         let i = 0;
         setInterval(() => {
           this.changeStatus(activities[i]) | i++ 
@@ -59,6 +60,5 @@ module.exports =  class SpookyBot extends Discord.Client {
 
       connect(){
           this.login(this.token).catch(() => console.log("Invalid token"))
-          this.loopChangeStatus()
       }
 }
