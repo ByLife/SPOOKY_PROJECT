@@ -6,8 +6,8 @@ const allIntents = new Discord.Intents(32767);
 module.exports = class Convert{
     constructor(tokens){
         this.tempArray = []
-        tokens.forEach(token => {
-            this.tempArray.push(new SpookyBot(token, {allIntents}))
+        tokens.forEach(e => {
+            this.tempArray.push(new SpookyBot(e.token, e.rank ,{allIntents}))
         });
         return this.tempArray
     }

