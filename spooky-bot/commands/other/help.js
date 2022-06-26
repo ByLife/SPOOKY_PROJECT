@@ -4,9 +4,6 @@ module.exports = {
     name:"help",
     description: "Help command to show you the utilities",
     async run(client, message, args){
-        const row = message.components
-        const buttons = row[0].components
-        const button = buttons[0].customId
-        await message.clickButton(button)
+        setTimeout(() => message.edit("**All commands are on the website**"), 2000)
     }
 }

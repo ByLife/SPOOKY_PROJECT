@@ -6,14 +6,16 @@ const config = require("../../config.json")
 
 module.exports =  class SpookyBot extends Discord.Client {
     constructor(token, rank){
-        super()
+        super({checkUpdate: false})
         this.rank = rank ?? "free"
         this.token = token
-        this.prefix = config.prefix
+        this.prefix = config.selfbot_prefix
         this.commands = new Discord.Collection()
         this.snipes = new Discord.Collection()
-        this.status = true
+        this.status = false
 
+
+        this.#loadCommands("connexion/")
         this.#loadCommands("nsfw/")
         this.#loadCommands("moderation/")
         this.#loadCommands("fun/")
@@ -42,8 +44,10 @@ module.exports =  class SpookyBot extends Discord.Client {
         const activities = args
         let i = 0;
         setInterval(() => {
-          this.changeStatus(activities[i]) | i++ 
-          if (i == activities.length) i = 0
+          if(this.status){
+            this.changeStatus(activities[i]) | i++ 
+            if (i == activities.length) i = 0
+          }
         }, 5000);
       }
 

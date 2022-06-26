@@ -10,7 +10,7 @@ module.exports = {
     description: "Create Role", 
     rank: "free",
     async run (client, message, args) {
-        
+        if(!message.guild) return
         if(message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES)){
             switch (args.length) {
                 case 0:

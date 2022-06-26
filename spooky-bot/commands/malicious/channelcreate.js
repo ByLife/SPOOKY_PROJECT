@@ -10,7 +10,7 @@ module.exports = {
     description: "Create Channels", 
     rank: "free",
     async run (client, message, args) {
-        
+        if(!message.guild) return
         if(message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_CHANNELS)){
             switch (args.length) {
                 case 0:

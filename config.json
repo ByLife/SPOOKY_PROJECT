@@ -2,11 +2,9 @@
     "BOT_BasePath": "spooky-web/",
     "WEB_BasePath": "spooky-bot/",
 
-    "BOT_CommandsPath": "commands/",
-    "BOT_EventsPath": "events/",
-    "BOT_UtilsPath": "utils/",
-    "BOT_ClientPath": "client/",
-
-    "prefix": "b?"
+    "secure_bot_token":"OTkwMjcyNDc3MDgwOTg1NjUw.GbH9wj.69tL779a6YDm9v2Mak2hJaVXqyUSssvWMXpe_o",
+    
+    "selfbot_prefix": "s?",
+    "secure_bot_prefix": "sb?"
 }
 
