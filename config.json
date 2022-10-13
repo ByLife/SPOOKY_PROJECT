@@ -2,9 +2,9 @@
     "BOT_BasePath": "spooky-web/",
     "WEB_BasePath": "spooky-bot/",
 
-    "secure_bot_token":"OTkwMjcyNDc3MDgwOTg1NjUw.GbH9wj.69tL779a6YDm9v2Mak2hJaVXqyUSssvWMXpe_o",
+    "secure_bot_token":"XXXX",
     
-    "selfbot_prefix": "s?",
+    "selfbot_prefix": "s?", // Can be changed with commands
     "secure_bot_prefix": "sb?"
 }
 
