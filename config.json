@@ -4,7 +4,7 @@
 
     "secure_bot_token":"XXXX",
     
-    "selfbot_prefix": "s?", // Can be changed with commands
+    "selfbot_prefix": "s?", 
     "secure_bot_prefix": "sb?"
 }
 
